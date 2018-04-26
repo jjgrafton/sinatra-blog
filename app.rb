@@ -2,6 +2,12 @@ require 'sinatra'
 require 'sinatra/activerecord' 
 require 'rake'
 require 'pg'
+require 'faker'
+
+require_relative './models/user'
+require_relative './models/post'
+require_relative './models/tag'
+
 
 set :database, {adapter: 'postgresql', database: 'crime_blog'}
 
@@ -35,9 +41,7 @@ post '/user/login' do
 end
     
 post '/user/new' do 
-    # @newuser = User.create(first_name: params[:first_name], last_name: params[:last_name] email: params[:email], password: params[:password], birthday: params[:birthday])
-    #Setting the session with key of ID to be equal to the users id
-    #Essentialy this "Logs them in"
+    @newuser = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password], birthday: params[:birthday])
     session[:id] = @newuser.id
     redirect 'users/show'
 end
