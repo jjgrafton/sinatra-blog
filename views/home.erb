@@ -1,0 +1,14 @@
+<div class="topnav">
+            <a href="/home">HOME |</a>
+            <a href="/about">ABOUT |</a>
+            <a href="/posts/new">New post |</a>
+            <a href="/posts/all_posts">Blog |</a>
+            <a href="/logout">Logout |</a>
+
+        </div>
+
+<% @posts.each do |post| %>
+  <h3><a href="/posts/<%= post.date %>"><%= post.title %></a></h3>
+  <p><%= post.content %></p>
+  <br>
+<% end %>

@@ -1,6 +1,0 @@
-<% @posts.each do |post| %>
-  <h3><a href="/posts/<%= post.date %>"><%= post.title %></a></h3>
-  <h4>By: <a href="/users/<%= post.user.first_name %>"></a></h4>
-  <p><%= post.content %></p>
-  <br>
-<% end %>
