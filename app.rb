@@ -37,12 +37,12 @@ end
 post '/user/new' do 
     @newuser = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password], birthday: params[:birthday])
     session[:id] = @newuser.id
-    redirect 'users/show'
+    redirect '/home'
 end
 
 #login page
 get '/login' do
-    erb :'users/login'
+    erb :'user/login'
 end
 
 #process login request 
@@ -59,7 +59,7 @@ end
 #logour process
 get '/logout' do
     session.clear
-    redirect 'users/login'
+    redirect '/'
 end
 
 #show a user's profile and posts

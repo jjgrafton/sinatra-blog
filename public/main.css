@@ -40,6 +40,17 @@
     justify-content: center;
 }
 
+.login-header {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+    margin-top: 30px;
+    padding-top: 1px;
+    border-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .nav-image {
     margin-top: 1px;
 }
@@ -85,6 +96,9 @@
 .content {
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .nav-left {
@@ -115,12 +129,28 @@
     background-color: red;
 }
 
+.display {
+    display: flex;
+    flex-direction: row;
+}
+
 .container {
     width: 900px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
 }
+
+.crime-forms {
+    color: black;
+    font-family: 'Special Elite', cursive;
+    font-size: 25px;
+}
+
+.tags {}
 
 .footer {
     display: flex;
@@ -136,4 +166,31 @@
 
 .icons {
     margin-right: 25px;
+}
+
+.welcome-banner {
+    margin-top: 50px;
+    font-family: 'Special Elite', cursive;
+    font-size: 60px;
+    color: black;
+}
+
+.welcome-message {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+}
+
+#signup-link {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: red;
+}
+
+#login-link {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: red;
 }
