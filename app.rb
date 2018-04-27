@@ -50,8 +50,7 @@ post '/login' do
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user != nil
         session[:id] = @user.id
-        @posts = Post.
-        erb :'users/show'
+        redirect '/profile'
     else   
         redirect '/signup'
     end 
