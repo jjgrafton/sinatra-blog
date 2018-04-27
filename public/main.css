@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: url('/images/blood.jpg') no-repeat center center fixed;
+    background: url('splatter/blood.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,6 +38,10 @@
     border-top: 0px;
     display: flex;
     justify-content: center;
+}
+
+.nav-image {
+    margin-top: 1px;
 }
 
 .topnav {
@@ -116,4 +120,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    background-color: grey;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: white;
+    padding-top: 25px;
+}
+
+.icons {
+    margin-right: 25px;
 }

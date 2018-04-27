@@ -1,5 +1,4 @@
 <div class="topnav">
-            <img src="/images/gunshot.jpeg" width="30" height="30" alt="">
             <nav class="navbar navbar-transparent bg-transparent">
             <a class="navbar-brand" href="/home">Home</a>
             <a class="navbar-brand" href="/about">About</a>
@@ -15,7 +14,8 @@
 
 <div class="container">
 <% @posts.each do |post| %>
-  <h3 class="main-header"><%= post.date %><%= post.title %></a></h3>
+  <h3 class="main-header">            <img src="images/gunshot.jpeg" class="nav-image" width="30" height="30" alt="">
+<%= post.date %><%= post.title %></a></h3>
   <p class="content"><%= post.content %></p>
   <br>
 <% end %>
