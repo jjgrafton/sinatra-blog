@@ -150,8 +150,6 @@
     font-size: 25px;
 }
 
-.tags {}
-
 .footer {
     display: flex;
     flex-direction: row;
@@ -169,6 +167,8 @@
 }
 
 .welcome-banner {
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
     font-family: 'Special Elite', cursive;
     font-size: 60px;
@@ -176,8 +176,19 @@
 }
 
 .welcome-message {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+}
+
+.login-message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
     font-family: 'Special Elite', cursive;
     font-size: 40px;
     color: grey;

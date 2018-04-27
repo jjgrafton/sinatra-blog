@@ -1,10 +1,15 @@
 
 
-<h2>Posts by <%= @user.username %>:</h2>
-// Display profile info here
+<h2><%= @user.first_name %> <%= @user.last_name %></h2>
+<p><%= @user.birthday %></p>
+<p><%= @user.email %></p>
+
+<h3>Here are your posts…</h3>
+
+
 <% @user.posts.each do |post| %>
-  <h3><a href="/posts/<%= post.slug %>"><%= post.title %></a></h3>
-  <p><strong><%= post.readable_date %></strong></p>
+  <h3><%= post.title %></a></h3>
+  <h3><%= post.date %></h3>
   <p><%= post.content %></p>
   <br>
 <% end %>

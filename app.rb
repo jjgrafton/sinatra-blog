@@ -42,17 +42,18 @@ end
 
 #login page
 get '/login' do
-    erb :'user/login'
+    erb :'users/login'
 end
 
 #process login request 
-post '/user/login' do 
+post '/login' do 
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user != nil
         session[:id] = @user.id
+        @posts = Post.
         erb :'users/show'
     else   
-        redirect 'users/signup'
+        redirect '/signup'
     end 
 end
 
