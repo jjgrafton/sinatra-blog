@@ -12,6 +12,15 @@
             </nav>
 </div>
 
+<ul id="dropdown2" class="dropdown-content">
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/posts/new">New Post</a></li>
+    <li><a href="/home">Posts</a></li>
+    <li><a href="/list">Users</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+  <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+
 <div class="display">
 <div class="container">
 <% @posts.each do |post| %>
