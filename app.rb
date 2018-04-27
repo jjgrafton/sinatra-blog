@@ -66,13 +66,14 @@ end
 get '/profile' do
     @user = User.find(session[:id])
     erb :'/users/show'
+end
 
 #user can delete their account
-delete '/user/:id' do 
-    User.destroy(params[:id])
-    redirect 'users/signup'
-end
-end
+# delete '/user/:id' do 
+#     User.destroy(params[:id])
+#     redirect 'users/signup'
+# end
+# end
 
 #create new post
 get '/posts/new' do
@@ -90,4 +91,3 @@ get '/user/posts' do
 end
 
 
-   

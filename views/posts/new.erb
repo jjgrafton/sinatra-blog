@@ -1,9 +1,24 @@
-<h2 class="login-header">Create Post:</h2>
-<form method="POST" action="/posts">
-  <label for="title" class="crime-forms">Title: </label><br>
-  <label for="date" class="crime-forms">Date: </label>
-  <input id="today" type="date"><br>
-  <input type="text" id="title" name="post[title]"><br><br>
-  <label for="content"class="crime-forms">Post: </label><br>
-  <textarea id="content" class = "materialize-textarea" name="post[content]" style="width:350px;height:150px;"></textarea>
+<div class="topnav">
+            <nav class="navbar navbar-transparent bg-transparent">
+            <a class="navbar-brand" href="/home">Home</a>
+            <a class="navbar-brand" href="/about">About</a>
+            <a class="navbar-brand" href="/posts/all_posts">Blog</a>
+   
+            <div class="user-box">
+            <button type="submit" class="btn btn-secondary" id="new-post-btn"><a href="/posts/new">New Post</a></button><br>
+            <button type="submit" class="btn bg-danger" id="logout-btn"><a href="/logout">Logout</a></button>
+            </div>
+            </nav>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="title" class="form-control" id="exampleFormControlInput1" placeholder="title">
+  </div>
+  <div class="form-group">
+    <label for="content">Write here:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
 </form>
+

@@ -205,3 +205,17 @@
     font-size: 40px;
     color: red;
 }
+
+.user-profile {
+    background-color: black;
+    border-radius: 5px;
+    color: #f3f3f3;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

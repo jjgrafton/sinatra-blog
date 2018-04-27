@@ -1,17 +1,37 @@
+<div class="topnav">
+            <nav class="navbar navbar-transparent bg-transparent">
+            <a class="navbar-brand" href="/home">Home</a>
+            <a class="navbar-brand" href="/about">About</a>
+            <a class="navbar-brand" href="/posts/all_posts">Blog</a>
+   
+            <div class="user-box">
+            <button type="submit" class="btn btn-secondary" id="new-post-btn"><a href="/posts/new">New Post</a></button><br>
+            <button type="submit" class="btn bg-danger" id="logout-btn"><a href="/logout">Logout</a></button>
+            </div>
+            </nav>
+</div>
+
+<div class="user-profile">
+<%= @user.first_name %> <%= @user.last_name %>&nbsp;&nbsp;
+Born on: <%= @user.birthday %>&nbsp;&nbsp;
+Email: <%= @user.email %>
+</div>
+
+<h3 class="login-message">Here are your posts…</h3>
+
+<div class="display">
+  <div class="container">
+    <% @user.posts.each do |post| %>
+  <h3 class="main-header"><img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt=""><%= post.title %></h3>
+      <p class="content"><%= post.content %></p>
+  </div>
+      <br>
+  <% end %>
+</div>
+<div class="tags">
+<h3 class="main-header">Tags</h3>
+</div>
+</div>
 
 
-<h2><%= @user.first_name %> <%= @user.last_name %></h2>
-<p><%= @user.birthday %></p>
-<p><%= @user.email %></p>
 
-<h3>Here are your posts…</h3>
-
-
-<% @user.posts.each do |post| %>
-  <h3><%= post.title %></a></h3>
-  <h3><%= post.date %></h3>
-  <p><%= post.content %></p>
-  <br>
-<% end %>
-
-<button type="submit">Delete Account</button>
