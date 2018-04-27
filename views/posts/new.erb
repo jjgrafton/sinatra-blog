@@ -13,13 +13,16 @@
 </div>
 
 <form>
-  <div class="form-group">
+  <div class="new-post-form" method="POST" action="/posts">
     <label for="title">Title:</label>
-    <input type="title" class="form-control" id="exampleFormControlInput1" placeholder="title">
+    <input type="title" placeholder="title">
   </div>
-  <div class="form-group">
+  <div class="new-post-content">
     <label for="content">Write here:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea rows="3"></textarea>
+  </div>
+  <div>
+  <button type="submit">Submit</button>
   </div>
 </form>
 

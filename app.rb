@@ -80,6 +80,18 @@ get '/posts/new' do
      erb :'posts/new'
 end
 
+post '/posts' do
+    if !params[:post][:title].empty? && !params[:post][:content].empty?
+      params[:post][:user_id] = current_user_id 
+      @post = Post.new(params[:post])
+
+      @post.save
+      redirect '/home'
+    else
+      redirect '/home'
+    end
+  end
+
 #view all posts
 get '/posts/all_posts' do 
     erb :'posts/all_posts'
