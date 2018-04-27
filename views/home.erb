@@ -1,14 +1,22 @@
 <div class="topnav">
-            <a href="/home">HOME |</a>
-            <a href="/about">ABOUT |</a>
-            <a href="/posts/new">New post |</a>
-            <a href="/posts/all_posts">Blog |</a>
-            <a href="/logout">Logout |</a>
+            <img src="/images/gunshot.jpeg" width="30" height="30" alt="">
+            <nav class="navbar navbar-transparent bg-transparent">
+            <a class="navbar-brand" href="/home">Home</a>
+            <a class="navbar-brand" href="/about">About</a>
+            <a class="navbar-brand" href="/posts/all_posts">Blog</a>
+   
+            <div class="user-box">
+            <button type="button" class="btn btn-dark" id="new-post-btn">New Post</button><br>
+            <button type="button" class="btn btn-secondary bg-danger" id="logout-btn">Logout</button>
+            </div>
+            </nav>
+</div>
 
-        </div>
 
+<div class="container">
 <% @posts.each do |post| %>
-  <h3><a href="/posts/<%= post.date %>"><%= post.title %></a></h3>
-  <p><%= post.content %></p>
+  <h3 class="main-header"><%= post.date %><%= post.title %></a></h3>
+  <p class="content"><%= post.content %></p>
   <br>
 <% end %>
+</div>
