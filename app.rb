@@ -68,6 +68,10 @@ get '/profile' do
     erb :'/users/show'
 end
 
+get '/userprofile' do
+
+end
+
 #user can delete their account
 # delete '/user/:id' do 
 #     User.destroy(params[:id])

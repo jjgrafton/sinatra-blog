@@ -21,13 +21,14 @@ Email: <%= @user.email %>
 <h3 class="login-message">Here are your posts…</h3>
 
 <div class="display">
-  <div class="container">
-    <% @user.posts.each do |post| %>
-  <h3 class="main-header"><img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt=""><%= post.title %></h3>
-      <p class="content"><%= post.content %></p>
-  </div>
-      <br>
-  <% end %>
+<div class="container">
+<% @user.posts.each do |post| %>
+  <h3 class="main-header">            
+  <img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt="">
+<%= post.title %></h3>
+  <p class="content"><%= post.content %></p>
+  <br>
+<% end %>
 </div>
 <div class="tags">
 <h3 class="main-header">Tags</h3>

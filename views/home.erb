@@ -1,37 +1,30 @@
-<div class="topnav">
-            <nav class="navbar navbar-transparent bg-transparent">
-            <a class="navbar-brand" href="/home">Home</a>
-            <a class="navbar-brand" href="/about">About</a>
-            <a class="navbar-brand" href="/list">Users</a>
-            <a class="navbar-brand" href="/profile">My Profile</a>
-   
-            <div class="user-box">
-            <button type="submit" class="btn btn-secondary" id="new-post-btn"><a href="/posts/new">New Post</a></button><br>
-            <button type="submit" class="btn bg-danger" id="logout-btn"><a href="/logout">Logout</a></button>
-            </div>
-            </nav>
-</div>
 
-<ul id="dropdown2" class="dropdown-content">
-    <li><a href="/profile">Profile</a></li>
-    <li><a href="/posts/new">New Post</a></li>
-    <li><a href="/home">Posts</a></li>
-    <li><a href="/list">Users</a></li>
-    <li><a href="/logout">Logout</a></li>
-  </ul>
-  <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+<div class="topnav">
+<nav class="navbar navbar-transparent bg-transparent">
+<a class="navbar-brand" href="/home">Posts</a>
+<a class="navbar-brand" href="/about">About</a>
+<a class="navbar-brand" href="/list">Users</a>
+<a class="navbar-brand" href="/profile">My Profile</a>
+
+<div class="user-box">
+<button type="submit" class="btn btn-secondary" id="new-post-btn"><a href="/posts/new">New Post</a></button><br>
+<button type="submit" class="btn bg-danger" id="logout-btn"><a href="/logout">Logout</a></button>
+</div>
+</nav>
+</div>
 
 <div class="display">
-<div class="container">
-<% @posts.each do |post| %>
-  <h3 class="main-header">            
-  <img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt="">
-<%= post.title %></h3>
-  <p class="content"><%= post.content %></p>
-  <br>
-<% end %>
-</div>
-<div class="tags">
-<h3 class="main-header">Tags</h3>
-</div>
+    <div class="container">
+        <% @posts.each do |post| %>
+        <h3 class="main-header">            
+        <img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt="">
+        <%= post.title %></h3>
+        <p class="post-author"><a href="/userprofile">By <%= post.user.first_name %> <%= post.user.last_name %><a></p>
+        <p class="content"><%= post.content %></p>
+        <br>
+        <% end %>
+    </div>
+    <div class="tags">
+        <h3 class="main-header">Tags</h3>
+    </div>
 </div>
