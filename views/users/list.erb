@@ -1,1 +1,9 @@
 <h2 class="login-header">Our True Crime Bloggers</h2>
+
+<div class="container">
+        <% @users.each do |post| %>
+    <div class="user-list">
+    <p><%= @user.email %> </p>
+    </div>
+    <% end %>
+</div>

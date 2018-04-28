@@ -72,6 +72,10 @@ get '/userprofile' do
 
 end
 
+get '/list' do
+    erb :'/users/list'
+end
+
 #user can delete their account
 # delete '/user/:id' do 
 #     User.destroy(params[:id])
@@ -81,20 +85,20 @@ end
 
 #create new post
 get '/posts/new' do
+    @title = "New Post"
+	@post = Post.new
      erb :'posts/new'
 end
 
 post '/posts' do
-    if !params[:post][:title].empty? && !params[:post][:content].empty?
-      params[:post][:user_id] = current_user_id 
-      @post = Post.new(params[:post])
-
-      @post.save
-      redirect '/home'
-    else
-      redirect '/home'
+    @post = Post.new(params[:post])
+	if @post.save
+		redirect "posts/#{@post.id}"
+	else
+		erb :"posts/new"
+	end
     end
-  end
+ 
 
 #view all posts
 get '/posts/all_posts' do 

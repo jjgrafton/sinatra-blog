@@ -1,28 +1,36 @@
-<div class="topnav">
-            <nav class="navbar navbar-transparent bg-transparent">
-            <a class="navbar-brand" href="/home">Home</a>
-            <a class="navbar-brand" href="/about">About</a>
-            <a class="navbar-brand" href="/list">Users</a>
-            <a class="navbar-brand" href="/profile">My Profile</a>
-   
-            <div class="user-box">
-            <button type="submit" class="btn btn-secondary" id="new-post-btn"><a href="/posts/new">New Post</a></button><br>
-            <button type="submit" class="btn bg-danger" id="logout-btn"><a href="/logout">Logout</a></button>
-            </div>
-            </nav>
+
+<div class="side-nav-bar">
+<nav class="nav flex-sm-column">
+  <a class="topnav" class="nav-link active" href="/home">Posts</a>
+  <a class="topnav" class="nav-link" href="/about">About</a>
+  <a class="topnav" class="nav-link" href="/list">Users</a>
+  <a  class="topnav"class="nav-link" href="/profile">My Profile</a>
+ <a  class="topnav"class="nav-link" href="/posts/new">New Post</a>
+  <a  class="topnav"class="nav-link" href="/logout">Logout</a>
+  <br>
+  <form class="example" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+      <br>
+    <a  class="delete-btn"class="nav-link" href="/delete">Delete Account</a>
+
+
+</nav>
 </div>
 
 <form>
-  <div class="new-post-form" method="POST" action="/posts">
-    <label for="title">Title:</label>
-    <input type="title" placeholder="title">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="title">
   </div>
-  <div class="new-post-content">
-    <label for="content">Write here:</label>
-    <textarea rows="3"></textarea>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Start writing…</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <div>
-  <button type="submit">Submit</button>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Tags</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="tags">
   </div>
 </form>
-
