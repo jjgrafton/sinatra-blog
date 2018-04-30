@@ -73,6 +73,7 @@ get '/userprofile' do
 end
 
 get '/list' do
+    @users = User.all
     erb :'/users/list'
 end
 
@@ -91,12 +92,9 @@ get '/posts/new' do
 end
 
 post '/posts' do
-    @post = Post.new(params[:post])
-	if @post.save
-		redirect "posts/#{@post.id}"
-	else
-		erb :"posts/new"
-	end
+    Post.create(title: params[:title], content: params[:content])
+    redirect :'/home'
+	
     end
  
 
