@@ -24,7 +24,7 @@
 <div class="container">
     <% @users.each do |user| %>
         <div class="user-list">
-        <p><%= user.first_name %> <%= user.last_name %>, <%= user.email %> </p>
+        <p><a href="/users/<%= user.id %>"<%= user.first_name %> <%= user.last_name %>, <%= user.email %> <a></p>
         </div>
     <% end %>
 </div>

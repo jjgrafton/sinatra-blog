@@ -15,9 +15,9 @@ enable :sessions
 
 #welcome page
 get '/' do 
-    # if logged_in?
-    #     redirect to '/users/show'
-    # else
+    if logged_in?
+        redirect to '/users/show'
+    else
         erb :index
 end
 # end
@@ -78,11 +78,11 @@ get '/list' do
 end
 
 #user can delete their account
-# delete '/user/:id' do 
-#     User.destroy(params[:id])
-#     redirect 'users/signup'
-# end
-# end
+delete '/user/:id' do 
+    User.destroy(session[:id])
+    redirect 'users/signup'
+end
+end
 
 #create new post
 get '/posts/new' do
@@ -92,7 +92,8 @@ get '/posts/new' do
 end
 
 post '/posts' do
-    Post.create(title: params[:title], content: params[:content])
+    @user = User.find(session[:id])
+    @newpost = Post.create(title: params[:title], content: params[:content])
     redirect :'/home'
 	
     end
@@ -108,4 +109,12 @@ get '/user/posts' do
     erb :'/users/show'
 end
 
+get '/edit' do
+    @user_avail = User.find(session[:id])
+    erb :edit
+end
 
+helpers do
+    def logged_in?
+      !!session[:user_id]
+    end
