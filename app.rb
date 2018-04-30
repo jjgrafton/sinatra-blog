@@ -9,7 +9,7 @@ require_relative './models/Post'
 require_relative './models/Tag'
 
 
-# set :database, {adapter: 'postgresql', database: 'crime_blog'}
+set :database, {adapter: 'postgresql', database: 'crime_blog'}
 
 enable :sessions
 
@@ -118,3 +118,5 @@ helpers do
     def logged_in?
       !!session[:user_id]
     end
+
+end
