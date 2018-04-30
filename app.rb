@@ -9,7 +9,7 @@ require_relative './models/post'
 require_relative './models/tag'
 
 
-set :database, {adapter: 'postgresql', database: 'crime_blog'}
+# set :database, {adapter: 'postgresql', database: 'crime_blog'}
 
 enable :sessions
 
