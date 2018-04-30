@@ -4,9 +4,9 @@ require 'rake'
 require 'pg'
 require 'faker'
 
-require_relative './models/user'
-require_relative './models/post'
-require_relative './models/tag'
+require_relative './models/User'
+require_relative './models/Post'
+require_relative './models/Tag'
 
 
 # set :database, {adapter: 'postgresql', database: 'crime_blog'}
