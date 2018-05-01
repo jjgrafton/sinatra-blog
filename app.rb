@@ -15,9 +15,9 @@ enable :sessions
 
 #welcome page
 get '/' do 
-    if logged_in?
-        redirect to '/users/show'
-    else
+    # if logged_in?
+    #     redirect to '/users/show'
+    # else
         erb :index
 end
 # end
