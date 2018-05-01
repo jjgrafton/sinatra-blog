@@ -22,7 +22,7 @@ get '/' do
 end
 # end
 
-#homepage
+#homepage showing all posts
 get '/home' do 
     @posts = Post.all
     erb :home
@@ -97,12 +97,7 @@ post '/posts' do
     redirect :'/home'
 	
     end
- 
 
-#view all posts
-get '/posts/all_posts' do 
-    erb :'posts/all_posts'
-end
 
 #show a user's posts
 get '/user/posts' do 
